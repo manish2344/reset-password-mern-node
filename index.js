@@ -13,7 +13,9 @@ connection();
 // middlewares
 app.use(express.json());
 app.use(cors());
-
+app.get("/",(req,res)=>{
+res.send("!!welcome")
+})
 // routes
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
